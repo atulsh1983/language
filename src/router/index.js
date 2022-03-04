@@ -1,11 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import Navbar from '../components/navbar/Navbar';
 import LoginPage from '../pages/LoginPage';
 import HomePage from '../pages/HomePage';
-import Navbar from '../components/navbar/Navbar';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 import '../App';
-import { useTranslation } from 'react-i18next';
-import '../App.css';
+
+
 
 const LoginFailed = () => {
     return (
@@ -21,21 +22,22 @@ const LoginFailed = () => {
 const RouterComponent = () => {
 
     const state = { isUserAuthenticated: localStorage.getItem("isAuth") };
-    const { t, i18n } = useTranslation()
+    const { t, i18n } = useTranslation();
+    const isUserAuthenticated = localStorage.getItem("isAuth");
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
+        localStorage.setItem("lang",lng);
     };
-
     async function doUserAuthen() {
         await localStorage.setItem("isAuth", true);
         window.location.href = "/";
     }
-    const isUserAuthenticated = localStorage.getItem("isAuth");
+
 
     return (
         <>
-            { isUserAuthenticated && <Navbar t={t}/> }
+            {isUserAuthenticated && <Navbar t={t} />}
             <Router>
                 <Switch>
                     <Route exact path="/"

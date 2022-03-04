@@ -9,8 +9,6 @@ import '../App';
 
 
 const LoginFailed = () => {
-
-
     return (
         <div className="LoggedOut" >
             <h3>You are not logged in,
@@ -31,11 +29,12 @@ const RouterComponent = () => {
         i18n.changeLanguage(lng);
         localStorage.setItem("lang",lng);
     };
-
     async function doUserAuthen() {
         await localStorage.setItem("isAuth", true);
         window.location.href = "/";
     }
+
+
     return (
         <>
             {isUserAuthenticated && <Navbar t={t} />}
@@ -64,7 +63,6 @@ const RouterComponent = () => {
                     {t('Bengali')}
                 </button>
             </div>
-
         </>
     );
 };

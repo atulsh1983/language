@@ -8,10 +8,8 @@ import './App.css'
 const App = () =>
 (
   <>
-   
     <RouterComponent />
   </>
 )
-
 
 export default App;

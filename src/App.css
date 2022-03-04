@@ -2,23 +2,86 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.btn {
+  background-color: #3f51b5;
+  color: #fff;
+  border: 0px;
+height: 32px;
+margin-left: 4px;
+padding: 0 12px;
+border-radius: 4px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.btnWpr {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.sidebar {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0, 0.4);
+  overflow-x: hidden;
+  transition: 0.5s;
+  
+}
+.logoCtnr{
+  height: 50px;
+  width: 120px;
+}
+.sidebar1 {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  
+  overflow-x: hidden;
+  padding-top: 8px;
+}
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #000;
+  display: block;
+  margin-top: 4px;
 }
 
-.App-intro {
-  font-size: large;
+.sidebar a:hover {
+  color: #000;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.main {
+  margin-left: 20%; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+.closeBtn {
+  background: #fff;
+border: 0px;
+color: #000;
+font-size: 24px;
+margin-right: 8px;
+margin-left: auto;
+color : #3f51b5;
+cursor: pointer;
+}
+.linkCtnr {
+  margin-top :16px;
+}
+.menuTitle{
+  color: black;
+  font-size: 24px;
+  margin : 0;
+}
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 14px;}
 }

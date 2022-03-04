@@ -18,7 +18,8 @@
     "react-flexible-sliding-menu": "^0.1.9",
     "react-i18next": "11.15.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "react-minimal-pie-chart": "8.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

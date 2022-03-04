@@ -32,7 +32,9 @@ const resources = {
         "Pending":"Pending",
         "Invoices":"Invoices",
         "chartlabel":"Sales Return",
-        "users" : "Users"     
+        "claim" : "Claim",
+        "approved": "Approved",
+        "new": "New"
       }
     }
   },
@@ -65,7 +67,11 @@ const resources = {
         "Pending":"বিচারাধীন",
         "Invoices":"চালান",
         "chartlabel":"বিক্রয় রিটার্ন",
-        "users" : "ব্যবহারকারীদের"    
+        "users" : "ব্যবহারকারীদের",
+        "claim" : "দাবি",
+        "approved": "অনুমোদিত",
+        "new": "নতুন"
+
       }
       
     }

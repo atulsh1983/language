@@ -5,6 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Demo from "../components/buttonUI/demo";
 import BarChart from '../components/BarChart';
+import PieChartUI from '../components/PieChartUI';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +23,23 @@ const useStyles = makeStyles((theme) => ({
   },
   backp: {
     backgroundColor: '#e1f5fe'
+  },
+  dots:{
+    width:'10px',
+    height:'10px',
+    backgroundColor: 'red'    
+  },
+  greendot:{
+    backgroundColor:'#3d8116',
+    width:'10px',
+    height:'10px'
+  },
+  bluedot:{
+    backgroundColor:'#3468fa',
+    width:'10px',
+    height:'10px'
   }
+
 })
 );
 
@@ -35,12 +52,12 @@ export default function HomePage(props) {
     { Month: 'January', ItemReturn: 12 },
     { Month: 'February', ItemReturn: 30 },
     { Month: 'March', ItemReturn: 40 },
-    { Month: 'April', ItemReturn: 10},
-    { Month:'May', ItemReturn: 16},
+    { Month: 'April', ItemReturn: 10 },
+    { Month: 'May', ItemReturn: 16 },
     { Month: 'June', ItemReturn: 13 },
     { Month: 'July', ItemReturn: 8 },
   ];
-  
+
 
   return (
     <div className={classes.root}>
@@ -72,17 +89,45 @@ export default function HomePage(props) {
 
         <Grid item xs={12} sm={6} >
           <Paper className={`${classes.paper}`}>
-              <BarChart
-                label={t('homePage.chartlabel')}
-                data={data}/>
+            <BarChart
+              label={t('homePage.chartlabel')}
+              data={data} />
           </Paper>
         </Grid>
         <Grid item xs={6} >
           <Paper className={`${classes.paper}`}>
-            <Typography align="left" color="textPrimary">{t('homePage.users')}</Typography>
+            <Typography align="left" color="textPrimary">{t('homePage.claim')}</Typography>
+            <PieChartUI />
+            <Grid container spacing={3} style={{'marginTop':'10px'}}>
+              <Grid item xs style={{'display':'flex','justifyContent':'center'}}>
+                  <div style={{'display':'flex'}}>
+                    <div style={{'display':'flex','alignItems':'center'}}>
+                        <div className={classes.dots}></div>
+                    </div>
+                    <div style={{'paddingLeft':'10px'}}>{t('homePage.new')}</div>
+                  </div>
+              </Grid>
+              <Grid item xs style={{'display':'flex','justifyContent':'center'}}>
+                  <div style={{'display':'flex'}}>
+                    <div style={{'display':'flex','alignItems':'center'}}>
+                        <div className={classes.bluedot}></div>
+                    </div>
+                    <div style={{'paddingLeft':'10px'}}>{t('homePage.Pending')}</div>
+                  </div>
+              </Grid>
+              <Grid item xs style={{'display':'flex','justifyContent':'center'}}>
+                  <div style={{'display':'flex'}}>
+                    <div style={{'display':'flex','alignItems':'center'}}>
+                        <div className={classes.greendot}></div>
+                    </div>
+                    <div style={{'paddingLeft':'10px'}}>{t('homePage.approved')}</div>
+                  </div>
+              </Grid>
+            </Grid>
+
           </Paper>
         </Grid>
-       
+
 
 
       </Grid>

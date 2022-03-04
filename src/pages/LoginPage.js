@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function LoginPage(props) {
   const classes = useStyles();
-  const [state, setState] = useState([]);
   const [email, setEmail] = useState('Sincere@april.biz');
   const [password, setPassword] = useState('Bret');
 

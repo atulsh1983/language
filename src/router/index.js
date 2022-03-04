@@ -34,16 +34,11 @@ const RouterComponent = () => {
                             return (
                                 state.isUserAuthenticated ? <Redirect to="/home" /> : <Redirect to="/login" />)
                         }} />
-
-
                     <Route path="/home/" exact>
                         {
                             state.isUserAuthenticated ? <HomePage /> : <LoginFailed />
                         }
                     </Route>
-
-
-
                     <Route path="/login" >
                         <LoginPage doLogin={doUserAuthen} />
                     </Route>

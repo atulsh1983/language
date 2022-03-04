@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Demo from "../components/buttonUI/demo";
 import BarChart from '../components/BarChart';
 import PieChartUI from '../components/PieChartUI';
-
+import { Divider, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,11 +18,37 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  paper2: {
+    color: theme.palette.text.secondary,
+  },
   backy: {
     backgroundColor: '#fffde7'
   },
   backp: {
     backgroundColor: '#e1f5fe'
+  },
+  sCtnr: {
+    padding: theme.spacing(1)
+
+  },
+  btn: {
+    background: "#007bff",
+    color: "#fff",
+
+  },
+  btn2: {
+    background: "#17a2b8",
+    color: "#fff",
+    marginRight: theme.spacing(1)
+
+  },
+  btnCtnr: {
+    paddingTop: theme.spacing(1),
+    display: "flex",
+    flexDirection: "row-reverse"
+  },
+  userText: {
+    fontSize: "18px"
   },
   dots:{
     width:'10px',
@@ -129,6 +155,50 @@ export default function HomePage(props) {
         </Grid>
 
 
+        <Grid item sm={12} xs={12} md={6}>
+          <Paper className={`${classes.paper2}`}>
+            <div className={classes.sCtnr}>
+              <Typography align="left" color="textPrimary" variant="h6">{t('homePage.users')}
+              </Typography>
+            </div>
+            <Divider />
+            <div className={classes.sCtnr}>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("userList.zoneManager")} 2</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("userList.whManager")} 3</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("userList.salesSupervisor")} 3</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("userList.dsManager")} 1</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("userList.deliveryPerson")} 1</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("userList.salsman")} 7</Typography>
+              <div className={classes.btnCtnr} >
+                <Button variant="contained" className={classes.btn}>{t("btnText.addusers")}</Button>
+                <Button variant="contained" className={classes.btn2}>{t("btnText.manageusers")}</Button>
+              </div>
+
+            </div>
+          </Paper>
+        </Grid>
+
+        <Grid item sm={12} xs={12} md={6}>
+          <Paper className={`${classes.paper2}`}>
+            <div className={classes.sCtnr}>
+              <Typography align="left" color="textPrimary" variant="h6">{t('homePage.organization')}
+              </Typography>
+            </div>
+            <Divider />
+            <div className={classes.sCtnr}>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("organizationList.zones")} - 2</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("organizationList.warehouse")} - 5</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}>  {t("organizationList.wsArea")}  3</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}>  {t("organizationList.outlet")} - 58</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("organizationList.distributor")} - 8</Typography>
+              <Typography align="left" color="textPrimary" className={classes.userText}> {t("organizationList.dsArea")} - 5 </Typography>
+              <div className={classes.btnCtnr} >
+                <Button variant="contained" className={classes.btn}>{t("btnText.manageOrg")}</Button>
+              </div>
+
+            </div>
+          </Paper>
+        </Grid>
 
       </Grid>
     </div>

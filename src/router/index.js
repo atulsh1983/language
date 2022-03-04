@@ -56,10 +56,11 @@ const RouterComponent = () => {
 
                 </Switch>
             </Router>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-                <button onClick={() => changeLanguage('en')}>
+            <div className={'btnWpr'}>
+                <button onClick={() => changeLanguage('en')} className={'btn'}>
                     {t('Eng')}
-                </button> <button onClick={() => changeLanguage('fr')}>
+                </button> 
+                <button onClick={() => changeLanguage('fr')} className={'btn'}>
                     {t('Bengali')}
                 </button>
             </div>

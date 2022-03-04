@@ -11,7 +11,6 @@ const App = () =>
   <>
     { isUserAuthenticated && <Navbar /> }
     <RouterComponent />
-    <Footer />
   </>
 )
 

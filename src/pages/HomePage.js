@@ -35,7 +35,7 @@ export default function HomePage() {
   return (
     <Grid container className={classes.root} spacing={1}>
       <Grid item xs={12}>
-        <Grid container justify="center" spacing={spacing} >
+        <Grid container justifyContent="center" spacing={spacing} >
 
           <Grid item>
             <Card className={classes.card}>

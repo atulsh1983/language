@@ -28,11 +28,12 @@ const useStyles = makeStyles((theme) => ({
 
 
 export default function LoginPage(props) {
+  const {t, i18n} = props
   const classes = useStyles();
+
   const [email, setEmail] = useState('Sincere@april.biz');
   const [password, setPassword] = useState('Bret');
 
-  
   const onEmailChange = e => {
     setEmail(e.target.value);
   }
@@ -44,7 +45,7 @@ export default function LoginPage(props) {
   }
 
   const onSubmit = async event => {
-      console.log("in on submit");
+    console.log("in on submit");
     event.preventDefault();
     props.doLogin()
 
@@ -59,7 +60,7 @@ export default function LoginPage(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Login to BlogSpace
+          {t('title')}
         </Typography>
 
         <form className={classes.form}>
@@ -69,7 +70,7 @@ export default function LoginPage(props) {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label={t('keywords.email')}
             name="email"
             autoComplete="email"
             value={email}
@@ -84,7 +85,7 @@ export default function LoginPage(props) {
             fullWidth
             name="password"
             value={password}
-            label="Password"
+            label={t('keywords.password')}
             type="password"
             id="password"
             autoComplete="current-password"
@@ -98,7 +99,7 @@ export default function LoginPage(props) {
             className={classes.submit}
             onClick={onSubmit}
           >
-            Log In
+            {t('btnText.login')}
           </Button>
 
         </form>

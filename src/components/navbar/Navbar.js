@@ -14,24 +14,25 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
-  
+
   title: {
-    marginRight:'40px'
+    marginRight: '40px'
   },
   users: {
     marginRight: '10'
   },
-  blogs: { 
+  blogs: {
     marginRight: 'auto',
   },
   link: {
-    color:'white'
+    color: 'white'
   },
-  name: { flexGrow: 1,
-   marginLeft: 'auto',
+  name: {
+    flexGrow: 1,
+    marginLeft: 'auto',
     marginTop: 10,
     minWidth: 130
-   
+
   },
 }));
 
@@ -50,7 +51,7 @@ export default function Navbar() {
     await setAnchorEl(null);
 
     await localStorage.removeItem("isAuth");
-    window.location.reload("./");
+    await window.location.reload("./");
   };
 
   const handleClose = () => {
@@ -70,13 +71,13 @@ export default function Navbar() {
             <Link href="/users/" className={classes.link}>Users</Link>
           </Button>
           <Button variant="outlined" color='primary' className={classes.blogs}>
-          <Link href="/blogs/" className={classes.link}> Blogs</Link>
+            <Link href="/blogs/" className={classes.link}> Blogs</Link>
           </Button>
 
-          <div style={{ display: 'flex', flexDirection:'row'}}>
-          <Typography variant="subtitle1" className={classes.name}>
-            User Name
-          </Typography>
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <Typography variant="subtitle1" className={classes.name}>
+              User Name
+            </Typography>
             <IconButton
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -86,27 +87,26 @@ export default function Navbar() {
             >
               <AccountCircle />
             </IconButton>
-            { 
-            localStorage.getItem("isAuth") &&
-            (<Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={open}
-              onClose={handleClose}
-            >
-              <MenuItem onClick={logoutUser}>Logout</MenuItem>
-            </Menu>)
+            {
+              localStorage.getItem("isAuth") &&
+              (<Menu
+                id="menu-appbar"
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: 'top',
+                  horizontal: 'right',
+                }}
+                open={open}
+                onClose={handleClose}
+              >
+                <MenuItem onClick={logoutUser}>Logout</MenuItem>
+              </Menu>)
             }
-            
           </div>
 
         </Toolbar>

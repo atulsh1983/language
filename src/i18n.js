@@ -31,7 +31,7 @@ const resources = {
   en: {
 
     translation: {
-      "title": "Login to Localizz",
+      "title": "Bizom Login",
       "keywords": {
         "email": "Email Address",
         "password": "Password",
@@ -51,28 +51,27 @@ const resources = {
         "InProcess":"In Process",
         "Completed":"Completed",
         "Pending":"Pending",
-        "Invoices":"Invoices"
-       
+        "Invoices":"Invoices",
+        "chartlabel":"Sales Return",
+        "users" : "Users"     
       }
-      
-
     }
   },
   fr: {
     translation: {
       "keywords": {
-        "email": "E-Mail-Addresse",
-        "title": "Willkommen bei Localizz",
-        "password": "Passwort",
+        "email": "ইমেইল ঠিকানা",
+        "title": "Bizom Login",
+        "password": "পাসওয়ার্ড",
       },
       "btnText": {
-        "login": "Einloggen"
+        "login": "প্রবেশ করুন"
       },
       "navbar":{
-        "Home":"Zuhause",     
-        "UserName": "Nutzername",
+        "Home":"বাড়ি",     
+        "UserName": "ব্যবহারকারীর নাম",
         "name":"Bizom",
-        "Logout":"Ausloggen"
+        "Logout":"প্রস্থান"
       },
       "homePage":{
         "Orders":"আদেশ",
@@ -80,8 +79,11 @@ const resources = {
         "InProcess":"প্রক্রিয়াধীন",
         "Completed":"সম্পন্ন",
         "Pending":"বিচারাধীন",
-        "Invoices":"চালান"
+        "Invoices":"চালান",
+        "chartlabel":"বিক্রয় রিটার্ন",
+        "users" : "ব্যবহারকারীদের"    
       }
+      
     }
   }
 };

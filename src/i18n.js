@@ -44,6 +44,15 @@ const resources = {
         "UserName": "User Name",
         "name":"Bizom",
         "Logout":"Logout"
+      },
+      "homePage":{
+        "Orders":"Orders",
+        "Recieved":"Recieved",
+        "InProcess":"In Process",
+        "Completed":"Completed",
+        "Pending":"Pending",
+        "Invoices":"Invoices"
+       
       }
       
 
@@ -64,6 +73,14 @@ const resources = {
         "UserName": "Nutzername",
         "name":"Bizom",
         "Logout":"Ausloggen"
+      },
+      "homePage":{
+        "Orders":"আদেশ",
+        "Recieved":"প্রাপ্ত",
+        "InProcess":"প্রক্রিয়াধীন",
+        "Completed":"সম্পন্ন",
+        "Pending":"বিচারাধীন",
+        "Invoices":"চালান"
       }
     }
   }

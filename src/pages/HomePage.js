@@ -5,8 +5,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Demo from "../components/buttonUI/demo";
 import BarChart from '../components/BarChart';
-import { Button, Divider } from '@material-ui/core';
-
+import PieChartUI from '../components/PieChartUI';
+import { Divider, Button } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,7 +49,23 @@ const useStyles = makeStyles((theme) => ({
   },
   userText: {
     fontSize: "18px"
+  },
+  dots:{
+    width:'10px',
+    height:'10px',
+    backgroundColor: 'red'    
+  },
+  greendot:{
+    backgroundColor:'#3d8116',
+    width:'10px',
+    height:'10px'
+  },
+  bluedot:{
+    backgroundColor:'#3468fa',
+    width:'10px',
+    height:'10px'
   }
+
 })
 );
 
@@ -105,10 +121,39 @@ export default function HomePage(props) {
           </Paper>
         </Grid>
         <Grid item xs={6} >
-          <Paper className={`${classes.paper2}`}>
-            <Typography align="left" color="textPrimary">{t('homePage.users')}</Typography>
+          <Paper className={`${classes.paper}`}>
+            <Typography align="left" color="textPrimary">{t('homePage.claim')}</Typography>
+            <PieChartUI />
+            <Grid container spacing={3} style={{'marginTop':'10px'}}>
+              <Grid item xs style={{'display':'flex','justifyContent':'center'}}>
+                  <div style={{'display':'flex'}}>
+                    <div style={{'display':'flex','alignItems':'center'}}>
+                        <div className={classes.dots}></div>
+                    </div>
+                    <div style={{'paddingLeft':'10px'}}>{t('homePage.new')}</div>
+                  </div>
+              </Grid>
+              <Grid item xs style={{'display':'flex','justifyContent':'center'}}>
+                  <div style={{'display':'flex'}}>
+                    <div style={{'display':'flex','alignItems':'center'}}>
+                        <div className={classes.bluedot}></div>
+                    </div>
+                    <div style={{'paddingLeft':'10px'}}>{t('homePage.Pending')}</div>
+                  </div>
+              </Grid>
+              <Grid item xs style={{'display':'flex','justifyContent':'center'}}>
+                  <div style={{'display':'flex'}}>
+                    <div style={{'display':'flex','alignItems':'center'}}>
+                        <div className={classes.greendot}></div>
+                    </div>
+                    <div style={{'paddingLeft':'10px'}}>{t('homePage.approved')}</div>
+                  </div>
+              </Grid>
+            </Grid>
+
           </Paper>
         </Grid>
+
 
         <Grid item sm={12} xs={12} md={6}>
           <Paper className={`${classes.paper2}`}>

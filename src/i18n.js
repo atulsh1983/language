@@ -38,6 +38,11 @@ const resources = {
       },
       "btnText": {
         "login": "Log In"
+      },
+      "links": {
+        "home" : "Home",
+        "claim": "Claims New",
+        "payment": "Payments"
       }
 
     }
@@ -51,6 +56,11 @@ const resources = {
       },
       "btnText": {
         "login": "Einloggen"
+      },
+      "links": {
+        "home" : "Hoe",
+        "claim": "Cms New",
+        "payment": "ents"
       }
     }
   }
@@ -60,7 +70,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "fr",
+    lng: "en",
     interpolation: {
       escapeValue: false
     }

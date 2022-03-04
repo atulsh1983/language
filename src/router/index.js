@@ -1,14 +1,13 @@
 import React from 'react';
 import LoginPage from '../pages/LoginPage';
 import HomePage from '../pages/HomePage';
+import Navbar from '../components/navbar/Navbar';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 import '../App';
 import { useTranslation } from 'react-i18next';
-
+import '../App.css';
 
 const LoginFailed = () => {
-
-
     return (
         <div className="LoggedOut" >
             <h3>You are not logged in,
@@ -32,8 +31,11 @@ const RouterComponent = () => {
         await localStorage.setItem("isAuth", true);
         window.location.href = "/";
     }
+    const isUserAuthenticated = localStorage.getItem("isAuth");
+
     return (
         <>
+            { isUserAuthenticated && <Navbar t={t}/> }
             <Router>
                 <Switch>
                     <Route exact path="/"
@@ -52,14 +54,10 @@ const RouterComponent = () => {
 
                 </Switch>
             </Router>
-            <div style={{ display: "flex", flexDirection: "row" }}>
-                <button onClick={() => changeLanguage('en')}>
-                    {t('Eng')}
-                </button> <button onClick={() => changeLanguage('fr')}>
-                    {t('German')}
-                </button>
+            <div className={'btnWpr'}>
+                <button className={"btn"} onClick={() => changeLanguage('en')}>English</button>
+                <button className={"btn"} onClick={() => changeLanguage('fr')}>German</button>
             </div>
-
         </>
     );
 };

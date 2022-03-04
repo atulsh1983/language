@@ -7,9 +7,9 @@ export default function PieChartUI() {
       <div style={{'width':'400px','margin':'0 auto'}}>
       <PieChart
         data={[
-          { title: "Onesdsad", value: 2, color: "blue" },
-          { title: "Two", value: 6, color: "red" },
-          { title: "Three", value: 2, color: "green" }
+          { title: "One", value: 2, color: "#4791db" },
+          { title: "Two", value: 6, color: "#e57373" },
+          { title: "Three", value: 2, color: "#4caf50" }
         ]}
         
       />

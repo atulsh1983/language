@@ -104,7 +104,7 @@ export default function HomePage(props) {
                     <div style={{'display':'flex','alignItems':'center'}}>
                         <div className={classes.dots}></div>
                     </div>
-                    <div style={{'paddingLeft':'10px'}}>{t('homePage.new')}</div>
+                    <div style={{'paddingLeft':'10px'}}>{t('homePage.new')}:6</div>
                   </div>
               </Grid>
               <Grid item xs style={{'display':'flex','justifyContent':'center'}}>
@@ -112,7 +112,7 @@ export default function HomePage(props) {
                     <div style={{'display':'flex','alignItems':'center'}}>
                         <div className={classes.bluedot}></div>
                     </div>
-                    <div style={{'paddingLeft':'10px'}}>{t('homePage.Pending')}</div>
+                    <div style={{'paddingLeft':'10px'}}>{t('homePage.Pending')}:2</div>
                   </div>
               </Grid>
               <Grid item xs style={{'display':'flex','justifyContent':'center'}}>
@@ -120,7 +120,7 @@ export default function HomePage(props) {
                     <div style={{'display':'flex','alignItems':'center'}}>
                         <div className={classes.greendot}></div>
                     </div>
-                    <div style={{'paddingLeft':'10px'}}>{t('homePage.approved')}</div>
+                    <div style={{'paddingLeft':'10px'}}>{t('homePage.approved')}:2</div>
                   </div>
               </Grid>
             </Grid>

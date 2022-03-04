@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Link from '@material-ui/core/Link';
@@ -36,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Navbar() {
+export default function Navbar(props) {
+  const {t, i18n} = props
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -49,7 +51,6 @@ export default function Navbar() {
   async function logoutUser() {
 
     await setAnchorEl(null);
-
     await localStorage.removeItem("isAuth");
     await window.location.reload("./");
   };
@@ -62,21 +63,17 @@ export default function Navbar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            BlogSpace
+            {t('navbar.name')}
           </Typography>
-          <Button variant="outlined" color='primary' className={classes.users}>
-            <Link href="/" className={classes.link}>Home</Link>
-          </Button>
-          <Button variant="outlined" color='primary' className={classes.users}>
-            <Link href="/users/" className={classes.link}>Users</Link>
-          </Button>
+        
+         
           <Button variant="outlined" color='primary' className={classes.blogs}>
-            <Link href="/blogs/" className={classes.link}> Blogs</Link>
+            <Link href="/" className={classes.link}>  {t('navbar.Home')} </Link>
           </Button>
 
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <Typography variant="subtitle1" className={classes.name}>
-              User Name
+            {t('navbar.UserName')}
             </Typography>
             <IconButton
               aria-label="account of current user"
@@ -104,7 +101,7 @@ export default function Navbar() {
                 open={open}
                 onClose={handleClose}
               >
-                <MenuItem onClick={logoutUser}>Logout</MenuItem>
+                <MenuItem onClick={logoutUser}>{t('navbar.Logout')}</MenuItem>
               </Menu>)
             }
           </div>

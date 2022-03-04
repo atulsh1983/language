@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import Navbar from '../components/navbar/Navbar';
 import LoginPage from '../pages/LoginPage';
 import HomePage from '../pages/HomePage';
 import { BrowserRouter as Router, Switch, Route, Redirect, Link } from 'react-router-dom';
 import '../App';
-import { useTranslation } from 'react-i18next';
+
 
 
 const LoginFailed = () => {
@@ -22,10 +24,12 @@ const LoginFailed = () => {
 const RouterComponent = () => {
 
     const state = { isUserAuthenticated: localStorage.getItem("isAuth") };
-    const { t, i18n } = useTranslation()
+    const { t, i18n } = useTranslation();
+    const isUserAuthenticated = localStorage.getItem("isAuth");
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
+        localStorage.setItem("lang",lng);
     };
 
     async function doUserAuthen() {
@@ -34,6 +38,7 @@ const RouterComponent = () => {
     }
     return (
         <>
+            {isUserAuthenticated && <Navbar t={t} />}
             <Router>
                 <Switch>
                     <Route exact path="/"

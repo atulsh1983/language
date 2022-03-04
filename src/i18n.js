@@ -38,7 +38,14 @@ const resources = {
       },
       "btnText": {
         "login": "Log In"
+      },
+      "navbar":{
+        "Home":"Home",     
+        "UserName": "User Name",
+        "name":"Bizom",
+        "Logout":"Logout"
       }
+      
 
     }
   },
@@ -51,6 +58,12 @@ const resources = {
       },
       "btnText": {
         "login": "Einloggen"
+      },
+      "navbar":{
+        "Home":"Zuhause",     
+        "UserName": "Nutzername",
+        "name":"Bizom",
+        "Logout":"Ausloggen"
       }
     }
   }
@@ -60,7 +73,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "fr",
+    lng: localStorage.getItem('lang')? localStorage.getItem('lang') : 'en',
     interpolation: {
       escapeValue: false
     }

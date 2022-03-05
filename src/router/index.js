@@ -8,13 +8,16 @@ import '../App';
 
 
 
-const LoginFailed = () => {
+const LoginFailed = ({ t }) => {
     return (
         <div className="LoggedOut" >
-            <h3>You are not logged in,
-                please
-                <Link to='/login'><span style={{ fontWeight: '400', margin: '0 5px' }}> Login </span></Link>
-                to continue.</h3>
+            <h3>{t("logOutPage.description1")}
+                <Link to='/login'>
+                    <span style={{ fontWeight: '400', margin: '0 5px' }}>
+                        {t("logOutPage.linkText")}
+                    </span>
+                </Link>
+                {t("logOutPage.description2")} </h3>
         </div>
     )
 }
@@ -27,7 +30,7 @@ const RouterComponent = () => {
 
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
-        localStorage.setItem("lang",lng);
+        localStorage.setItem("lang", lng);
     };
     async function doUserAuthen() {
         await localStorage.setItem("isAuth", true);
@@ -59,12 +62,12 @@ const RouterComponent = () => {
             <div className={'btnWpr'}>
                 <button onClick={() => changeLanguage('en')} className={'btn'}>
                     {t('language.english')}
-                </button> 
+                </button>
                 <button onClick={() => changeLanguage('fr')} className={'btn'}>
-                {t('language.bengali')}
+                    {t('language.bengali')}
                 </button>
                 <button onClick={() => changeLanguage('vie')} className={'btn'}>
-                {t('language.vietnamese')}
+                    {t('language.vietnamese')}
                 </button>
             </div>
         </>

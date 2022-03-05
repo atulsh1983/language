@@ -61,6 +61,12 @@ const resources = {
         "english": "English",
         "bengali": "Bengali",
         "vietnamese": "Vietnamese"
+      },
+      "logOutPage": {
+        "linkText": "Login",
+        "description1": "You are not logged in, please ",
+        "description2": " to continue.",
+        
       }
     }
   },
@@ -124,11 +130,17 @@ const resources = {
         "english": "ইংরেজি",
         "bengali": "বাংলা",
         "vietnamese": "ভিয়েতনামী"
+      },
+      "logOutPage": {
+        "linkText": "প্রবেশ করুন",
+        "description1": "আপনি লগ ইন করেননি, চালিয়ে",
+        "description2" : "যেতে লগইন করুন।",
+
       }
     }
   },
   vie: {
-    translation:{
+    translation: {
       "title": "Đăng nhập Bizom",
       "keywords": {
         "email": "Địa chỉ email",
@@ -186,9 +198,14 @@ const resources = {
         "english": "tiếng Anh",
         "bengali": "Tiếng Bengali",
         "vietnamese": "Tiếng Việt"
+      },
+      "logOutPage": {
+        "linkText": "Đăng nhập",
+        "description1": "Bạn chưa đăng nhập, vui lòng",
+        "description2" :" để tiếp tục.",
       }
     }
-   
+
   }
 }
 

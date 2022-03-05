@@ -3,7 +3,6 @@ import { initReactI18next } from "react-i18next";
 
 const resources = {
   en: {
-
     translation: {
       "title": "Bizom Login",
       "keywords": {
@@ -27,23 +26,22 @@ const resources = {
         "name": "Bizom",
         "Logout": "Logout"
       },
-     
       "userList": {
-        "zoneManager": "ZONE MANAGER(s)",
-        "whManager": "WAREHOUSE MANAGER(s)",
-        "salesSupervisor": "SALES Supervisor(s)",
-        "dsManager": "DISTRIBUTOR SALES MANAGER(s)",
-        "deliveryPerson": "DELIVERY PERSON(s)",
-        "salsman": "SALESMAN(s)"
+        "zoneManager": "Zone Manager(s)",
+        "whManager": "Warehouse Manager(s)",
+        "salesSupervisor": "Sales Supervisor(s)",
+        "dsManager": "Distributors Sales Manager",
+        "deliveryPerson": "Delivery Person(s)",
+        "salsman": "Salesman(s)"
       },
       "organizationList":
       {
-        "zones": "ZONE(s)",
-        "warehouse": "WAREHOUSE(s)",
-        "wsArea": "WAREHOUSE AREA(s)",
-        "outlet": "OUTLET(s)",
-        "distributor": "DISTRIBUTOR(s)",
-        "dsArea": "DISTRIBUTOR AREA(s)",
+        "zones": "Zone(s)",
+        "warehouse": "Warehouse(s)",
+        "wsArea": "Warehouse Area(s)",
+        "outlet": "Outlet(s)",
+        "distributor": "Distributor(s)",
+        "dsArea": "Distributor Area(s)",
       },
       "homePage": {
         "Orders": "Orders",
@@ -58,6 +56,11 @@ const resources = {
         "new": "New",
         "users": "Users",
         "organization": "Organization"
+      },
+      "language": {
+        "english": "English",
+        "bengali": "Bengali",
+        "vietnamese": "Vietnamese"
       }
     }
   },
@@ -84,17 +87,6 @@ const resources = {
         "UserName": "ব্যবহারকারীর নাম",
         "name": "Bizom",
         "Logout": "প্রস্থান"
-      },
-      "homePage": {
-        "Orders": "আদেশ",
-        "Recieved": "প্রাপ্ত",
-        "InProcess": "প্রক্রিয়াধীন",
-        "Completed": "সম্পন্ন",
-        "Pending": "বিচারাধীন",
-        "Invoices": "চালান",
-        "chartlabel": "বিক্রয় রিটার্ন",
-        "users": "ব্যবহারকারীদের",
-        "organization": "সংগঠন"
       },
       "userList": {
         "zoneManager": " জোন ম্যানেজার",
@@ -124,10 +116,79 @@ const resources = {
         "users": "ব্যবহারকারীদের",
         "claim": "দাবি",
         "approved": "অনুমোদিত",
-        "new": "নতুন"
-
+        "new": "নতুন",
+        "users": "ব্যবহারকারীদের",
+        "organization": "সংগঠন"
+      },
+      "language": {
+        "english": "ইংরেজি",
+        "bengali": "বাংলা",
+        "vietnamese": "ভিয়েতনামী"
       }
     }
+  },
+  vie: {
+    translation:{
+      "title": "Đăng nhập Bizom",
+      "keywords": {
+        "email": "Địa chỉ email",
+        "password": "Mật khẩu",
+      },
+      "btnText": {
+        "login": "Đăng nhập",
+        "addusers": "Thêm người dùng",
+        "manageusers": "Quản lý người dùng",
+        "manageOrg": "Quản lý tổ chức"
+      },
+      "links": {
+        "home": "Nhà",
+        "claim": "Tuyên bố mới",
+        "payment": "Thanh toán"
+      },
+      "navbar": {
+        "Home": "Nhà",
+        "UserName": "Tên tài khoản",
+        "name": "Bizom",
+        "Logout": "Đăng xuất"
+      },
+      "userList": {
+        "zoneManager": "Quản lý khu vực",
+        "whManager": "Quản lý kho",
+        "salesSupervisor": "Giám sát bán hàng",
+        "dsManager": "Giám đốc bán hàng của nhà phân phối",
+        "deliveryPerson": "Người giao hàng",
+        "salsman": "Người bán hàng"
+      },
+      "organizationList":
+      {
+        "zones": "Vùng",
+        "warehouse": "Kho",
+        "wsArea": "Khu vực kho",
+        "outlet": "Chỗ thoát",
+        "distributor": "Nhà phân phối",
+        "dsArea": "Khu vực nhà phân phối",
+      },
+      "homePage": {
+        "Orders": "Đơn hàng",
+        "Recieved": "Được nhận",
+        "InProcess": "Đang tiến hành",
+        "Completed": "Hoàn thành",
+        "Pending": "Chưa giải quyết",
+        "Invoices": "Hóa đơn",
+        "chartlabel": "Lợi nhuận bán hàng",
+        "claim": "Yêu cầu",
+        "approved": "Tán thành",
+        "new": "Mới mẻ",
+        "users": "Người dùng",
+        "organization": "Cơ quan"
+      },
+      "language": {
+        "english": "tiếng Anh",
+        "bengali": "Tiếng Bengali",
+        "vietnamese": "Tiếng Việt"
+      }
+    }
+   
   }
 }
 

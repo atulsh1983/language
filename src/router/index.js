@@ -58,10 +58,13 @@ const RouterComponent = () => {
             </Router>
             <div className={'btnWpr'}>
                 <button onClick={() => changeLanguage('en')} className={'btn'}>
-                    {t('Eng')}
+                    {t('language.english')}
                 </button> 
                 <button onClick={() => changeLanguage('fr')} className={'btn'}>
-                    {t('Bengali')}
+                {t('language.bengali')}
+                </button>
+                <button onClick={() => changeLanguage('vie')} className={'btn'}>
+                {t('language.vietnamese')}
                 </button>
             </div>
         </>
